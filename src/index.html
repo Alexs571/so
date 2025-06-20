@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADcode</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body class="antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-teal-700">Seguridad en SO</h1>
+                </div>
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#intro" class="nav-link px-3 py-2 text-sm font-medium">Introducción</a>
+                        <a href="#tipos" class="nav-link px-3 py-2 text-sm font-medium">Tipología</a>
+                        <a href="#historia" class="nav-link px-3 py-2 text-sm font-medium">Línea de Tiempo</a>
+                        <a href="#impacto" class="nav-link px-3 py-2 text-sm font-medium">Impacto y Vectores</a>
+                        <a href="#prevencion" class="nav-link px-3 py-2 text-sm font-medium">Prevención</a>
+
+                        <a href="#futuro" class="nav-link px-3 py-2 text-sm font-medium">Tendencias Futuras</a>
+                    </div>
+                </nav>
+                <!-- Botón menú móvil -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600"
+                        aria-expanded="false" aria-controls="mobile-menu">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú móvil -->
+        <div class="md:hidden hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#intro" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Introducción</a>
+                <a href="#tipos" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Tipología</a>
+                <a href="#historia" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Línea de
+                    Tiempo</a>
+                <a href="#impacto" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Impacto y
+                    Vectores</a>
+                <a href="#prevencion" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Prevención</a>
+                <a href="#futuro" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Tendencias
+                    Futuras</a>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <section id="intro" class="content-section active">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-4 text-teal-700">Proposito y alcance</h2>
+                <p class="text-lg text-slate-600 mb-6">El desarrollo de esta pagina se hizo con las ganas e intenciones
+                    de poder informar sobre seguridad informatica. <br> Podras recorrer una guia con los conceptos
+                    fundamentales para generar conciencia sobre seguridad en los sistmas. Abordaremos temas malware,
+                    firewall y metodos para mantener seguro neustros dispositivos
+
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">¿Qué es el Malware?</h3>
+                        <p class="text-slate-600">Un término que engloba virus, gusanos, troyanos, ransomware y más. Su
+                            objetivo común: causar daño. Es crucial entender que "virus" es solo una subcategoría, no el
+                            espectro completo de amenazas.
+                            <br>
+                            Entonces definimos malware como software que se diseño exclusivamente para causar daño.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800">¿Que es un Firewall?</h3>
+                        <p class="text-slate-600">Firewall, seria como un corta fuego. Es un software que busca limitar
+                            el acceso al dispositivo en el cual lo esta hosteando</p>
+                    </div>
+
+                    <div class="bg-slate-50  col-span-2 row-start-2  p-6 rounded-lg border border-slate-200">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800 text-center">La Importancia de la seguridad en
+                            sistemas</h3>
+                        <p class="text-slate-600">En un mundo interconectado, un ataque puede escalar de un incidente
+                            local a una crisis global. La 'ciberseguridad' ya no es una opción, es una necesidad para
+                            proteger nuestra economía, privacidad y seguridad nacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tipos" class="content-section">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-teal-700">Tipología del Malware</h2>
+                <p class="text-lg text-slate-600 mb-8">El universo del malware es diverso. Cada tipo tiene un método de
+                    operación y un objetivo único. Haga clic en una categoría para explorar sus características,
+                    ejemplos y cómo se diferencia de los demás. Comprender al enemigo es el primer paso para una defensa
+                    efectiva.</p>
+
+                <div id="tipos-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8 text-center">
+                </div>
+
+                <div id="tipo-detalle-container"
+                    class="bg-slate-50 p-6 rounded-lg border border-slate-200 min-h-[300px]">
+                </div>
+            </div>
+        </section>
+
+        <section id="historia" class="content-section">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-teal-700">Línea de Tiempo del Malware</h2>
+                <p class="text-lg text-slate-600 mb-8">La historia del malware es un reflejo de la evolución de la
+                    tecnología. Desde experimentos teóricos hasta armas cibernéticas capaces de causar daño físico.
+                    Explore los hitos que han marcado esta carrera armamentista digital haciendo clic en cada año.</p>
+                <div class="relative overflow-x-auto flex flex-col pb-4">
+                    <div class="flex items-center  flex-col" id="timeline-container">
+                    </div>
+                    <div class="items-center bg-slate-50 p-8 rounded-lg shadow-lg">
+                        <p class="text-[20px] pt-5 ">Estos son los casos que considere más importantes y relevantes.
+                            Estos sucesos generaron un gran impacto ya sea social, económico, social o tecnológico.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="impacto" class="content-section">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-teal-700">Impacto y Vectores de Infección</h2>
+                <p class="text-lg text-slate-600 mb-8">El malware se propaga a través de diversas rutas, conocidas como
+                    vectores de ataque, y sus consecuencias pueden ser devastadoras. Esta sección explora la conexión
+                    entre cómo se infectan los sistemas y el daño resultante, desde pérdidas económicas hasta la
+                    paralización de servicios esenciales.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">Vectores de Infección Comunes</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-lg">🛡️ Ingeniería Social</h4>
+                                <p class="text-sm text-slate-600">Manipulación psicológica para engañar a los usuarios.
+                                    Incluye Phishing (correos fraudulentos), Vishing (voz) y Smishing (SMS).</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-lg">📥 Descargas Maliciosas</h4>
+                                <p class="text-sm text-slate-600">Instalación de malware sin consentimiento al visitar
+                                    sitios web comprometidos (Drive-by Downloads) o a través de anuncios infectados
+                                    (Malvertising).</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-lg">⚙️ Vulnerabilidades de Software</h4>
+                                <p class="text-sm text-slate-600">Explotación de fallos de seguridad en sistemas
+                                    operativos o aplicaciones sin parches actualizados. Frecuente en gusanos como
+                                    WannaCry.</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h4 class="font-bold text-lg">💾 Medios Extraíbles</h4>
+                                <p class="text-sm text-slate-600">Propagación a través de unidades USB o discos duros
+                                    externos que transportan el malware de un equipo infectado a otro.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">Impacto Económico de Ataques Notorios</h3>
+                        <p class="text-slate-600 mb-4">La siguiente gráfica ilustra el costo financiero estimado de
+                            algunos de los peores ataques de malware de la historia, demostrando que el daño va mucho
+                            más allá de lo técnico.</p>
+                        <div class="chart-container">
+                            <canvas id="impactoChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prevencion" class="content-section">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-teal-700">Guía de Prevención y Protección</h2>
+                <p class="text-lg text-slate-600 mb-8">La defensa contra el malware es una responsabilidad compartida.
+                    Requiere tanto herramientas tecnológicas como hábitos seguros. La mejor defensa es una estrategia
+                    proactiva. Siga estas prácticas recomendadas para reducir significativamente su riesgo de infección.
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center"><span
+                                class="text-2xl mr-3">🛡️</span>Firewall</h3>
+                        <p class="text-teal-900">Usá siempre un firewall para bloquear accesos no autorizados desde
+                            internet y proteger tu red y tus datos personales.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center">
+                            <span class="text-2xl mr-3">👤</span>Gestión de Usuarios
+                        </h3>
+                        <p class="text-teal-900">Limitá los permisos solo a lo necesario. No uses cuentas
+                            administrativas para tareas diarias y eliminá accesos innecesarios.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center"><span
+                                class="text-2xl mr-3">🦠</span>Antivirus Actualizado</h3>
+                        <p class="text-teal-900">Instale y mantenga actualizado un software antimalware de confianza.
+                            Configure análisis regulares.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center"><span
+                                class="text-2xl mr-3">🔄</span>Actualizaciones Constantes</h3>
+                        <p class="text-teal-900">Mantenga su sistema operativo y todas sus aplicaciones actualizadas
+                            para corregir vulnerabilidades.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center"><span
+                                class="text-2xl mr-3">🧠</span>Piense Antes de Hacer Clic</h3>
+                        <p class="text-teal-900">Desconfíe de correos electrónicos y enlaces inesperados. Verifique
+                            siempre el remitente y la URL.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center"><span
+                                class="text-2xl mr-3">🔑</span>Contraseñas Fuertes</h3>
+                        <p class="text-teal-900">Use contraseñas largas, complejas y únicas para cada servicio.
+                            Considere usar un gestor de contraseñas.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center"><span
+                                class="text-2xl mr-3">💾</span>Copias de Seguridad</h3>
+                        <p class="text-teal-900">Realice copias de seguridad regulares de sus datos importantes en un
+                            dispositivo externo o en la nube.</p>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-bold text-xl mb-2 text-teal-800 flex items-center"><span
+                                class="text-2xl mr-3">🌐</span>Navegación Segura</h3>
+                        <p class="text-teal-900">Evite las redes Wi-Fi públicas para transacciones sensibles y descargue
+                            software solo de fuentes oficiales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="futuro" class="content-section">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-teal-700">Tendencias y Futuro del Malware</h2>
+                <p class="text-lg text-slate-600 mb-8">El panorama de amenazas está en constante evolución. Los
+                    ciberdelincuentes adoptan nuevos modelos de negocio y tecnologías para hacer sus ataques más
+                    efectivos y difíciles de detectar. Comprender estas tendencias es clave para anticipar las defensas
+                    del mañana.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
+                            <h3 class="font-bold text-xl mb-2 text-slate-800">Malware como Servicio (MaaS/RaaS)</h3>
+                            <p class="text-slate-600">Los ciberdelincuentes ya no necesitan ser expertos técnicos. Ahora
+                                pueden "alquilar" kits de ransomware y otras herramientas en la dark web, pagando una
+                                suscripción o un porcentaje de las ganancias. Esto ha democratizado el cibercrimen,
+                                aumentando drásticamente el número de ataques.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
+                            <h3 class="font-bold text-xl mb-2 text-slate-800">Ataques a la Cadena de Suministro</h3>
+                            <p class="text-slate-600">En lugar de atacar directamente a un objetivo grande y bien
+                                defendido, los criminales comprometen a un proveedor de software más pequeño. Inyectan
+                                código malicioso en una actualización legítima, que luego se distribuye a miles de
+                                clientes del proveedor, explotando la confianza existente.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-6 bg-rose-50 rounded-lg border border-rose-200">
+                            <h3 class="font-bold text-xl mb-2 text-rose-800">El Doble Filo de la Inteligencia Artificial
+                                (IA)</h3>
+                            <p class="text-rose-900 mb-4">La IA es la nueva frontera en la ciberguerra, utilizada tanto
+                                por atacantes como por defensores.</p>
+                            <ul class="list-disc list-inside space-y-2 text-rose-900">
+                                <li><strong class="font-semibold">Para el Ataque:</strong> La IA se usa para crear
+                                    correos de phishing ultra-realistas, generar malware polimórfico que cambia
+                                    constantemente para evadir la detección, e incluso clonar voces para estafas de
+                                    vishing.</li>
+                                <li><strong class="font-semibold">Para la Defensa:</strong> La IA es crucial para
+                                    analizar enormes volúmenes de datos y detectar anomalías, identificando amenazas
+                                    nuevas o desconocidas basándose en su comportamiento, no solo en su firma.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="timeline-modal" class="fixed inset-0 pt-5 bg-black/50 flex items-center justify-center z-40 hidden">
+        <div class="modal-content bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 id="modal-title" class="text-2xl font-bold text-teal-700"></h3>
+                        <p id="modal-year" class="text-sm text-slate-500"></p>
+                    </div>
+                    <button id="modal-close" class="text-slate-400 hover:text-slate-600">&times;</button>
+                </div>
+                <div class="mt-4">
+                    <p class="font-semibold text-slate-800">Tipo: <span id="modal-type"
+                            class="font-normal text-slate-600"></span></p>
+                    <p class="font-semibold text-slate-800">Impacto: <span id="modal-impact"
+                            class="font-normal text-slate-600"></span></p>
+                    <p id="modal-description" class="mt-2 text-slate-600"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.content-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function updateActiveContent() {
+                const hash = window.location.hash || '#intro';
+
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === hash);
+                });
+
+                sections.forEach(section => {
+                    section.classList.toggle('active', section.id === hash.substring(1));
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    window.location.hash = link.getAttribute('href');
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            window.addEventListener('hashchange', updateActiveContent);
+            updateActiveContent();
+
+            const malwareTypes = [
+                { id: 'virus', name: 'Virus', icon: '🦠', description: 'Necesita un anfitrión (un archivo) para propagarse y requiere intervención humana para activarse. Se adjunta a programas legítimos y, al ejecutarse, infecta otros archivos.', examples: 'ILOVEYOU, Melissa, Stuxnet (componente de virus).' },
+                { id: 'gusano', name: 'Gusanos', icon: '🐛', description: 'Se autorreplica y propaga de forma independiente a través de redes, sin necesidad de un anfitrión ni de intervención humana. Explotan vulnerabilidades para infectar nuevos sistemas.', examples: 'Morris, Code Red, SQL Slammer, WannaCry.' },
+                { id: 'troyano', name: 'Troyanos', icon: '🐴', description: 'Se disfraza de software legítimo para engañar al usuario y lograr que lo instale. No se autorreplica, pero abre una "puerta trasera" para que los atacantes roben datos o tomen el control.', examples: 'Emotet, Zeus, AIDS (troyano ransomware).' },
+                { id: 'ransomware', name: 'Ransomware', icon: '💰', description: 'Cifra los archivos de la víctima o bloquea el acceso al sistema y exige un rescate económico (generalmente en criptomonedas) para restaurar el acceso. Es un modelo de extorsión digital.', examples: 'WannaCry, CryptoLocker, Ryuk.' },
+                { id: 'spyware', name: 'Spyware', icon: '👀', description: 'Recopila información del usuario sin su consentimiento. Registra la actividad en línea, pulsaciones de teclas (keyloggers), credenciales y datos financieros, y los envía a un atacante remoto.', examples: 'CoolWebSearch, FinFisher.' },
+                { id: 'adware', name: 'Adware', icon: '📢', description: 'Muestra publicidad no deseada en la pantalla del usuario. Aunque a menudo es más molesto que dañino, puede recopilar datos de navegación para personalizar anuncios y ralentizar el sistema.', examples: 'Fireball, Appearch.' },
+            ];
+
+            const tiposGrid = document.getElementById('tipos-grid');
+            const tipoDetalleContainer = document.getElementById('tipo-detalle-container');
+
+            malwareTypes.forEach(tipo => {
+                const card = document.createElement('div');
+                card.className = 'type-card bg-slate-100 p-4 rounded-lg shadow-sm border border-transparent hover:border-teal-500';
+                card.dataset.typeId = tipo.id;
+                card.innerHTML = `
+                    <div class="text-4xl mb-2">${tipo.icon}</div>
+                    <h3 class="font-bold text-slate-800">${tipo.name}</h3>
+                `;
+                tiposGrid.appendChild(card);
+            });
+
+            function showTipoDetalle(typeId) {
+                const tipo = malwareTypes.find(t => t.id === typeId);
+                
+                if (tipo) {
+                  
+                    tipoDetalleContainer.innerHTML = `
+                        <h3 class="text-2xl font-bold mb-2 text-teal-700">${tipo.icon} ${tipo.name}</h3>
+                        <p class="text-lg text-slate-600 mb-4">${tipo.description}</p>
+                        <p class="font-semibold text-slate-800">Ejemplos Notorios: <span class="font-normal text-slate-600">${tipo.examples}</span></p>
+                    `;
+                    document.querySelectorAll('.type-card').forEach(c => c.classList.remove('bg-teal-100', 'border-teal-500'));
+                    document.querySelector(`.type-card[data-type-id="${typeId}"]`).classList.add('bg-teal-100', 'border-teal-500');
+                }
+            }
+
+            tiposGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.type-card');
+                if (card) {
+                    showTipoDetalle(card.dataset.typeId);
+                }
+            });
+
+            showTipoDetalle('virus');
+
+
+            const timelineData = [
+                { year: '1966', name: 'Von Neumann', type: 'Teórico', impact: 'N/A', description: 'John von Neumann plantea el marco teórico de los programas autorreplicantes, lo que sienta las bases conceptuales del malware moderno.' },
+                { year: '1971', name: 'Creeper y Reaper', type: 'Gusano (experimental) / Antivirus', impact: 'N/A', description: 'Creeper fue el primer gusano, se replicaba por ARPANET y mostraba el mensaje: "SOY CREEPER: ATRÁPAME SI PUEDES". Reaper fue creado para eliminarlo, convirtiéndose en el primer antivirus.' },
+                { year: '1980', name: 'Disquetes como medio de infección', type: 'Método de propagación', impact: 'N/A', description: 'En ausencia de redes masivas, los disquetes fueron el medio principal para propagar malware, una práctica que continuaría durante años.' },
+                { year: '1982', name: 'Elk Cloner', type: 'Virus de arranque', impact: 'N/A', description: 'Uno de los primeros virus en propagarse "in the wild", afectaba sistemas Apple II mediante disquetes e infectaba el sector de arranque.' },
+                { year: '1986', name: 'Brain', type: 'Virus', impact: 'N/A', description: 'Primer virus para PC con MS-DOS. Distribuido por hermanos pakistaníes que buscaban proteger derechos de autor, infectaba el sector de arranque y mostraba información de contacto.' },
+                { year: '1988', name: 'Gusano Morris', type: 'Gusano', impact: '$10-100 millones', description: 'Paralizó el 10% de ARPANET. Primer malware con gran impacto y primer caso judicial de fraude informático en EE.UU. Dio origen al CERT.' },
+                { year: '1989', name: 'Troyano AIDS', type: 'Ransomware', impact: 'N/A', description: 'Primer ransomware conocido. Se distribuía por disquete, cifraba archivos y exigía un pago por correo postal.' },
+                { year: '1999', name: 'Melissa', type: 'Gusano', impact: 'Millones de dólares', description: 'Se propagaba a través de correos en Outlook, sobrecargando servidores de grandes corporaciones como Microsoft y el Pentágono.' },
+                { year: '2000', name: 'ILOVEYOU', type: 'Gusano', impact: '$10-15 mil millones', description: 'Distribuido por correo electrónico, usaba ingeniería social y phishing. Infectó millones de computadoras robando contraseñas.' },
+                { year: '2003', name: 'SQL Slammer', type: 'Gusano', impact: 'Más de $1.2 mil millones', description: 'Infectó 75.000 servidores en 10 minutos, causando una interrupción global masiva de Internet.' },
+                { year: '2007', name: 'Zeus', type: 'Troyano', impact: 'Altamente dañino', description: 'Robaba credenciales y convertía PCs en parte de botnets. Se propagaba por descargas ocultas y spam. Fue usado luego para propagar ransomware.' },
+                { year: '2010', name: 'Stuxnet', type: 'Gusano', impact: 'Daño físico significativo', description: 'Malware avanzado desarrollado para sabotear instalaciones nucleares iraníes. Primera arma cibernética conocida con efectos físicos reales.' },
+                { year: '2013', name: 'CryptoLocker', type: 'Ransomware', impact: '$3 millones estimados', description: 'Se propagaba mediante botnets infectadas por Zeus. Cifraba archivos y pedía rescate de 715 USD. En 2014 fue desactivado.' },
+                { year: '2014', name: 'Emotet', type: 'Troyano (modular y polimórfico)', impact: 'Muy alto', description: 'Malware polimórfico usado para distribuir otros malware. Se actualizaba automáticamente y era difícil de detectar. Usaba phishing como principal vector.' },
+                { year: '2016', name: 'Mirai', type: 'Botnet', impact: 'Ataques DDoS globales', description: 'Creado por un estudiante universitario, infectó miles de dispositivos IoT mal protegidos y causó la caída de servicios de Internet en EE.UU. y otros países.' },
+                { year: '2017', name: 'WannaCry', type: 'Ransomware', impact: '$4 mil millones', description: 'Se propagó usando la vulnerabilidad EternalBlue de Windows. Afectó a más de 200.000 computadoras en 150 países, incluyendo hospitales del NHS británico.' }
+            ];
+
+            const timelineContainer = document.getElementById('timeline-container');
+            const modal = document.getElementById('timeline-modal');
+            const modalClose = document.getElementById('modal-close');
+
+            timelineData.forEach((item, index) => {
+                const timelineElement = document.createElement('div');
+                timelineElement.className = 'flex flex-col items-center flex-shrink-0';
+
+                const dot = document.createElement('div');
+                dot.className = 'w-4 h-4 bg-teal-600 rounded-full z-10 timeline-item';
+                dot.dataset.index = index;
+
+                const line = document.createElement('div');
+                if (index < timelineData.length - 1) {
+                    line.className = 'w-2 bg-slate-300 h-24 mt-2';
+                }
+
+                const yearLabel = document.createElement('p');
+                yearLabel.className = 'mt-2 font-bold text-slate-800';
+                yearLabel.textContent = item.year;
+
+                timelineElement.appendChild(dot);
+                timelineElement.appendChild(yearLabel);
+
+                timelineContainer.appendChild(timelineElement);
+                if (line.className) {
+                    timelineContainer.appendChild(line);
+                }
+            });
+
+            timelineContainer.addEventListener('click', e => {
+                if (e.target.classList.contains('timeline-item')) {
+                    
+                    const index = e.target.dataset.index;
+                    const data = timelineData[index];
+                    document.getElementById('modal-title').textContent = data.name;
+                    document.getElementById('modal-year').textContent = data.year;
+                    document.getElementById('modal-type').textContent = data.type;
+                    document.getElementById('modal-impact').textContent = data.impact;
+                    document.getElementById('modal-description').textContent = data.description;
+                    modal.classList.remove('hidden');
+                }
+            });
+
+            function closeModal() {
+                modal.classList.add('hidden');
+            }
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', e => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            
+
+            const ctx = document.getElementById('impactoChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['ILOVEYOU (2000)', 'Code Red (2001)', 'SQL Slammer (2003)', 'Stuxnet (2010)', 'WannaCry (2017)'],
+                    datasets: [{
+                        label: 'Daño Estimado (en miles de millones de USD)',
+                        data: [15, 2.4, 1.2, 1, 4],
+                        backgroundColor: [
+                            'rgba(20, 184, 166, 0.6)',
+                            'rgba(249, 115, 22, 0.6)',
+                            'rgba(239, 68, 68, 0.6)',
+                            'rgba(168, 85, 247, 0.6)',
+                            'rgba(59, 130, 246, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgb(13, 148, 136)',
+                            'rgb(234, 88, 12)',
+                            'rgb(220, 38, 38)',
+                            'rgb(147, 51, 234)',
+                            'rgb(37, 99, 235)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Miles de Millones de USD'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y * 1000000000);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
