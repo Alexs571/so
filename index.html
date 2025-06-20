@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADcode</title>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
- 
+
 </head>
 
 <body class="antialiased">
@@ -93,9 +93,24 @@
                     <div class="bg-slate-50  col-span-2 row-start-2  p-6 rounded-lg border border-slate-200">
                         <h3 class="font-bold text-xl mb-2 text-slate-800 text-center">La Importancia de la seguridad en
                             sistemas</h3>
-                        <p class="text-slate-600">En un mundo interconectado, un ataque puede escalar de un incidente
-                            local a una crisis global. La 'ciberseguridad' ya no es una opción, es una necesidad para
-                            proteger nuestra economía, privacidad y seguridad nacional.</p>
+                        <p class="text-slate-600">En un mundo cada vez más interconectado y dependiente de la
+                            tecnología, la seguridad en los sistemas informáticos se ha convertido en un pilar
+                            fundamental para el correcto funcionamiento de nuestras sociedades. Un simple ataque
+                            cibernético, que en un pasado podía considerarse un problema aislado o local, ahora tiene el
+                            potencial de escalar rápidamente y afectar a nivel global, generando crisis económicas,
+                            sociales e incluso políticas.
+                            <br>
+
+                            La seguridad de los sistemas ya no es una opción o un lujo para las organizaciones y gobiernos, sino
+                            una necesidad urgente. Proteger la infraestructura digital es clave para salvaguardar la
+                            economía, ya que gran parte del comercio, la producción y los servicios dependen hoy de
+                            sistemas informáticos seguros y confiables. Además, la privacidad de las personas se
+                            encuentra en juego, ya que que  millones de datos personales circulan a diario en
+                            redes y plataformas digitales, siendo blanco constante de ciberdelincuentes.
+                            <br>
+                            En resumen, la seguridad en sistemas es una inversión estratégica que protege no solo la
+                            tecnología, sino también la confianza, el bienestar y el desarrollo sostenible de nuestras
+                            sociedades en el mundo digital.</p>
                     </div>
                 </div>
             </div>
@@ -374,9 +389,9 @@
 
             function showTipoDetalle(typeId) {
                 const tipo = malwareTypes.find(t => t.id === typeId);
-                
+
                 if (tipo) {
-                  
+
                     tipoDetalleContainer.innerHTML = `
                         <h3 class="text-2xl font-bold mb-2 text-teal-700">${tipo.icon} ${tipo.name}</h3>
                         <p class="text-lg text-slate-600 mb-4">${tipo.description}</p>
@@ -448,7 +463,7 @@
 
             timelineContainer.addEventListener('click', e => {
                 if (e.target.classList.contains('timeline-item')) {
-                    
+
                     const index = e.target.dataset.index;
                     const data = timelineData[index];
                     document.getElementById('modal-title').textContent = data.name;
@@ -470,7 +485,7 @@
                 }
             });
 
-            
+
 
             const ctx = document.getElementById('impactoChart').getContext('2d');
             new Chart(ctx, {
